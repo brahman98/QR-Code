@@ -1,0 +1,538 @@
+$button-color: #d9d9d9;
+$primary-color: #278fef;
+$secondary-color: #1ac8ff;
+$font-size: 16px;
+$border: 2px solid black;
+$border-radius: 8px;
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  max-width: 414px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  // background-color: #f8f9fa;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 24px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__lang {
+    margin-left: 6px;
+  }
+}
+
+.main {
+  max-width: 314px;
+  text-align: center;
+
+  h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.05em;
+    line-height: 58px;
+
+    .highlight {
+      color: #007bff;
+      background: linear-gradient(90deg, #278fef, #1ac8ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .input__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input__type {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      button {
+        background-color: $button-color;
+        border: none;
+        border-radius: $border-radius;
+        padding: 10px 13px;
+        cursor: pointer;
+        font-size: $font-size;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .input__input {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 70%;
+        padding: 10px;
+        border: $border;
+        border-radius: $border-radius;
+        font-size: 14px;
+      }
+
+      input::placeholder {
+        color: #999; /* Задаёт цвет текста placeholder */
+        font-size: 16px; /* Задаёт размер шрифта */
+        opacity: 1; /* Делает placeholder полностью непрозрачным */
+        font-weight: 500;
+      }
+
+      .btn-go {
+        width: 20%;
+        background-color: #ffffff;
+        color: #000000;
+        border: $border;
+        border-radius: $border-radius;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    }
+
+    .btn-settings {
+      width: 314px;
+      background-color: $button-color;
+      border: none;
+      border-radius: $border-radius;
+      padding: 10px 30px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $font-size;
+      font-weight: 500;
+      margin-top: 25px;
+
+      .left-btn-settings {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .qr__container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .qr__code {
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .download__buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        background-color: $button-color;
+        border: none;
+        border-radius: $border-radius;
+        padding: 13px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: $font-size;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 18px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.hr {
+  border: none; /* Убирает стандартное обрамление */
+  border-top: 2px solid $button-color; /* Создаёт серую линию толщиной 2px */
+  color: #808080; /* Задаёт цвет линии (на случай, если браузер будет использовать color) */
+  background-color: #808080; /* Резервный цвет для фона */
+  width: 100%;
+  margin: 16px;
+}
+
+.footer {
+  width: 100%;
+  //   background-color: #f8f9fa;
+  text-align: center;
+  font-size: $font-size;
+
+  .p__text {
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding: 16px;
+    margin: 0;
+    // letter-spacing: 1px;
+  }
+
+  .footer__nav {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      color: #728a96;
+      text-decoration: none;
+      margin: 5px 16px;
+    }
+  }
+
+  .social__media {
+    a {
+      margin: 0 10px;
+
+      img {
+        width: 24px;
+      }
+    }
+  }
+}
+
+// Медиа-запрос для планшетов (от 768px до 1024px)
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    max-width: 1024px; // Ширина экрана планшета
+    margin: 0 auto; // Центровка контента
+  }
+
+  .header {
+    max-width: 750px;
+
+    &__logo {
+      h1 {
+        font-size: 24px; // Увеличиваем размер шрифта
+        margin-left: 0;
+      }
+    }
+
+    &__icons {
+      img {
+        width: 28px; // Увеличиваем размер иконок
+      }
+
+      .header__lang {
+        font-size: 18px; // Увеличиваем размер текста
+      }
+    }
+  }
+
+  .main {
+    max-width: 700px; // Увеличиваем ширину основного контейнера
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 64px; // Увеличиваем размер заголовка
+      line-height: 1.1;
+
+      .highlight {
+        font-size: 76px;
+      }
+    }
+
+    &__content {
+      min-width: 668px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 30px;
+
+      .input__container {
+        max-width: 314px;
+        .input__p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        .input__type {
+          button {
+            padding: 12px 16px; // Увеличиваем отступы кнопок
+            font-size: 18px; // Увеличиваем шрифт
+          }
+        }
+
+        .input__input {
+          input {
+            width: 70%; // Увеличиваем ширину инпута
+            padding: 12px;
+            font-size: 16px;
+          }
+
+          .btn-go {
+            width: 20%;
+            padding: 12px 18px;
+            font-size: $font-size;
+          }
+        }
+
+        .btn-settings {
+          width: 100%; // Расширяем кнопку на всю ширину
+          padding: 14px 35px;
+          font-size: 18px; // Увеличиваем размер текста
+          margin-bottom: 0;
+        }
+      }
+
+      .qr__container {
+        margin-bottom: 0;
+
+        .qr__code {
+          width: 300px;
+          height: 300px;
+        }
+
+        .download__buttons {
+          button {
+            padding: 14px 12px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .hr {
+    max-width: 668px;
+  }
+  .footer {
+    padding: 20px;
+    max-width: 668px;
+
+    .p__text {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    .footer__nav {
+      flex-direction: row; // Перестраиваем элементы в линию
+      flex-wrap: wrap; // Позволяем переносить элементы на следующую строку при нехватке места
+      justify-content: center;
+
+      a {
+        margin: 8px 10px; // Отступы между ссылками
+      }
+    }
+
+    .social__media {
+      margin: 10px 0;
+
+      a {
+        img {
+          width: 38px; // Увеличиваем иконки соц. сетей
+        }
+      }
+    }
+  }
+}
+
+
+// Медиа-запрос для компьютеров (от 1024px)
+@media screen and (min-width: 1025px) {
+  body {
+    max-width: 1024px; // Ширина экрана компа
+    margin: 0 auto; // Центровка контента
+  }
+
+  .header {
+    width: 1120px;
+
+    &__logo {
+        margin-left: 0;
+    }
+
+    &__icons {
+      img {
+        width: 28px; // Увеличиваем размер иконок
+        margin-left: 35px;
+      }
+
+      .header__lang {
+        font-size: 18px; // Увеличиваем размер текста
+      }
+    }
+  }
+
+  .main {
+    min-width: 800px; // Увеличиваем ширину основного контейнера
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 86px; // Увеличиваем размер заголовка
+      line-height: 1.1;
+
+      .highlight {
+        font-size: 138px;
+      }
+    }
+
+    &__content {
+      min-width: 668px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 30px;
+
+      .input__container {
+        max-width: 420px;
+        .input__p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        .input__type {
+          button {
+            padding: 12px 16px; // Увеличиваем отступы кнопок
+            font-size: 18px; // Увеличиваем шрифт
+          }
+        }
+
+        .input__input {
+          input {
+            width: 70%; // Увеличиваем ширину инпута
+            padding: 12px;
+            font-size: 16px;
+          }
+
+          .btn-go {
+            width: 20%;
+            padding: 12px 18px;
+            font-size: $font-size;
+          }
+        }
+
+        .btn-settings {
+          width: 100%; // Расширяем кнопку на всю ширину
+          padding: 14px 35px;
+          font-size: 18px; // Увеличиваем размер текста
+          margin-bottom: 0;
+        }
+      }
+
+      .qr__container {
+        margin-bottom: 0;
+
+        .qr__code {
+          width: 300px;
+          height: 300px;
+        }
+
+        .download__buttons {
+          button {
+            padding: 14px 12px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .hr {
+    max-width: 800px;
+  }
+  .footer {
+    // padding: 20px;
+    width: 800px;
+
+    .p__text {
+      font-size: 18px;
+      line-height: 32px;
+      padding: 16px 0;
+    }
+
+    .footer__nav {
+      flex-direction: row; // Перестраиваем элементы в линию
+      flex-wrap: wrap; // Позволяем переносить элементы на следующую строку при нехватке места
+      justify-content: center;
+
+      a {
+        margin: 8px 10px; // Отступы между ссылками
+      }
+    }
+
+    .social__media {
+      margin: 10px 0;
+
+      a {
+        img {
+          width: 38px; // Увеличиваем иконки соц. сетей
+        }
+      }
+    }
+  }
+}

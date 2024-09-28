@@ -1,14 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR-Code Generator</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Твой QR-код для сайта</h1>
-    <!-- Здесь будет контент -->
-    <script src="js/script.js"></script>
-</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="QR-Code Logo" />
+        <h1>QR-Code</h1>
+      </div>
+      <div class="header__icons">
+        <img src="img/moon.svg" alt="Toggle Theme" />
+        <img src="img/bars-solid.svg" alt="Menu" />
+        <img src="img/globe-solid.svg" alt="Change Language" />
+        <span class="header__lang">Ru</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <h2>Твой QR&#8209;код<br /><span class="highlight">для сайта</span></h2>
+
+      <div class="main__content">
+        <div class="input__container">
+          <p class="input__p">
+            loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit
+            amet dui iaculis ex efficitur ultricies ac nec neque. Sed elementum
+            lectus vel dui feugiat.
+          </p>
+          <div class="input__type">
+            <button><img src="img/link-solid.svg" alt="URL" /> URL</button>
+            <button>
+              <img src="img/envelope-solid.svg" alt="Email" /> E-mail
+            </button>
+            <button>
+              <img src="img/align-justify-solid.svg" alt="Text" /> Text
+            </button>
+          </div>
+          <div class="input__input">
+            <input type="text" placeholder="https://" />
+            <button class="btn-go">GO</button>
+          </div>
+          <button class="btn-settings">
+            <div class="left-btn-settings">
+              <img src="img/gear-solid.svg" alt="Settings" />
+              <span>Настройки</span>
+            </div>
+            <span>+</span>
+          </button>
+        </div>
+
+        <div class="qr__container">
+          <div class="qr__code">
+            <img src="img/Untitled.svg" alt="QR Code" />
+          </div>
+          <div class="download__buttons">
+            <button>
+              <img src="img/download-solid.svg" alt="Download PNG" /> Скачать
+              PNG
+            </button>
+            <button>
+              <img src="img/download-solid.svg" alt="Download SVG" /> Скачать
+              SVG
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <hr class="hr" />
+
+    <footer class="footer">
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="QR-Code Logo" />
+        <h1>QR-Code</h1>
+      </div>
+      <p class="p__text">
+        loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit
+        amet dui iaculis ex efficitur ultricies ac nec neque. Sed elementum
+        lectus vel.
+      </p>
+      <div class="footer__nav">
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Вопросы/Ответы</a>
+        <a href="#">Условия использования</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+      <div class="social__media">
+        <a href="#"><img src="img/youtube-brands-solid.svg" alt="YouTube" /></a>
+        <a href="#"
+          ><img src="img/telegram-brands-solid.svg" alt="Telegram"
+        /></a>
+      </div>
+      <p>© QR-Code.ru 2024.</p>
+    </footer>
+  </body>
 </html>
