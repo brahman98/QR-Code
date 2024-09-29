@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.main .qr__container .download__buttons button, .main .input__container .btn-settings, .main .input__container .input__input .btn-go, .main .input__container .input__type button {
+  color: black;
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -122,7 +126,6 @@ body {
 .main .input__container .input__input .btn-go {
   width: 20%;
   background-color: #ffffff;
-  color: #000000;
   border: 2px solid black;
   border-radius: 8px;
   padding: 10px 15px;
