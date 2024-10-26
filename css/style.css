@@ -33,9 +33,11 @@ body {
   display: flex;
   align-items: center;
   margin-left: 16px;
+  text-decoration: none;
+  color: black;
 }
 .header__logo img {
-  width: 25px;
+  width: 40px;
   margin-right: 10px;
 }
 .header__logo h1 {
@@ -43,9 +45,13 @@ body {
   font-weight: 600;
   margin: 0;
 }
+.header__logo:visited {
+  color: black;
+}
 .header__icons {
   display: flex;
   align-items: center;
+  margin-right: 16px;
 }
 .header__icons img {
   width: 24px;
@@ -86,10 +92,11 @@ body {
   margin-bottom: 25px;
 }
 .main .input__container .input__type button {
+  font-family: Inter, sans-serif;
   background-color: #d9d9d9;
   border: none;
   border-radius: 8px;
-  padding: 10px 13px;
+  padding: 14px 14px;
   cursor: pointer;
   font-size: 16px;
   display: flex;
@@ -105,11 +112,14 @@ body {
   justify-content: space-between;
 }
 .main .input__container .input__input input {
-  width: 70%;
-  padding: 10px;
+  width: 69%;
+  padding: 14px;
   border: 2px solid black;
   border-radius: 8px;
   font-size: 14px;
+}
+.main .input__container .input__input input:focus {
+  outline: none;
 }
 .main .input__container .input__input input::-moz-placeholder {
   color: #999; /* Задаёт цвет текста placeholder */
@@ -136,7 +146,6 @@ body {
   background-color: #d9d9d9;
   border: none;
   border-radius: 8px;
-  padding: 10px 30px;
   margin-bottom: 15px;
   cursor: pointer;
   display: flex;
@@ -145,14 +154,23 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin-top: 25px;
+  text-align: initial;
 }
 .main .input__container .btn-settings .left-btn-settings {
   display: flex;
   align-items: center;
+  padding: 14px 30px;
+  justify-content: space-between;
+}
+.main .input__container .btn-settings .left-btn-settings div {
+  display: flex;
 }
 .main .input__container .btn-settings img {
   width: 18px;
   margin-right: 5px;
+}
+.main .input__container details > summary::-webkit-details-marker {
+  display: none; /* Эй, Chrome, смотри, стрелка исчезла! */
 }
 .main .qr__container {
   margin-top: 20px;
@@ -210,8 +228,8 @@ body {
 .footer .p__text {
   font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
-  text-align: left;
+  line-height: 24px;
+  text-align: justify;
   padding: 16px;
   margin: 0;
 }
@@ -228,9 +246,9 @@ body {
 }
 .footer .social__media a {
   margin: 0 10px;
-}
-.footer .social__media a img {
-  width: 24px;
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -267,15 +285,18 @@ body {
     min-width: 668px;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: start;
     margin-bottom: 30px;
   }
   .main__content .input__container {
     max-width: 314px;
   }
   .main__content .input__container .input__p {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .main__content .input__container .input__type {
+    margin-bottom: 22px;
   }
   .main__content .input__container .input__type button {
     padding: 12px 16px;
@@ -293,9 +314,9 @@ body {
   }
   .main__content .input__container .btn-settings {
     width: 100%;
-    padding: 14px 35px;
     font-size: 18px;
     margin-bottom: 0;
+    margin-top: 22px;
   }
   .main__content .qr__container {
     margin-bottom: 0;
@@ -305,7 +326,7 @@ body {
     height: 300px;
   }
   .main__content .qr__container .download__buttons button {
-    padding: 14px 12px;
+    padding: 14.5px 12px;
     font-size: 18px;
   }
   .hr {
@@ -358,17 +379,17 @@ body {
     padding: 0 20px;
   }
   .main h2 {
-    font-size: 86px;
+    font-size: 76px;
     line-height: 1.1;
   }
   .main h2 .highlight {
-    font-size: 138px;
+    font-size: 108px;
   }
   .main__content {
     min-width: 668px;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: start;
     margin-bottom: 30px;
   }
   .main__content .input__container {
@@ -377,6 +398,9 @@ body {
   .main__content .input__container .input__p {
     font-size: 20px;
     line-height: 30px;
+  }
+  .main__content .input__container .input__type {
+    margin-bottom: 29px;
   }
   .main__content .input__container .input__type button {
     padding: 12px 16px;
@@ -394,9 +418,9 @@ body {
   }
   .main__content .input__container .btn-settings {
     width: 100%;
-    padding: 14px 35px;
     font-size: 18px;
     margin-bottom: 0;
+    margin-top: 28px;
   }
   .main__content .qr__container {
     margin-bottom: 0;
@@ -406,7 +430,7 @@ body {
     height: 300px;
   }
   .main__content .qr__container .download__buttons button {
-    padding: 14px 12px;
+    padding: 14.5px 12px;
     font-size: 18px;
   }
   .hr {
@@ -434,4 +458,74 @@ body {
   .footer .social__media a img {
     width: 38px;
   }
+}
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+body.light-theme {
+  background-color: #fff;
+  color: #000000;
+}
+
+body.dark-theme {
+  background-color: #2f2f2f;
+  color: #ffffff !important;
+}
+body.dark-theme .header__logo:visited {
+  color: #ffffff;
+}
+body.dark-theme .header__logo {
+  color: #ffffff;
+}
+body.dark-theme .footer__nav a {
+  color: #17adf9;
+}
+body.dark-theme .social__media a {
+  color: white;
+}
+
+.header__icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.lang-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%; /* Чтобы список появлялся под кнопкой */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none; /* Скрываем список по умолчанию */
+  z-index: 1;
+}
+
+.lang-dropdown[open] .lang-options {
+  display: block; /* Показываем список, когда details открыт */
+}
+
+.lang-options li {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.lang-options li:hover {
+  background-color: #f0f0f0;
 }/*# sourceMappingURL=style.css.map */

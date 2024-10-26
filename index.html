@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QR-Code Generator</title>
+    <title>QR code 2025</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/54cdbeebd7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body class="light-theme">
     <header class="header">
-      <div class="header__logo">
-        <img src="img/logo.svg" alt="QR-Code Logo" />
-        <h1>QR-Code</h1>
-      </div>
+      <a href="/index.html" class="header__logo">
+        <img src="img/qrcode.JPG" alt="QR-Code Logo" />
+        <h1>QRcode2025.ru</h1>
+      </a>
       <div class="header__icons">
-        <img src="img/moon.svg" alt="Toggle Theme" />
-        <img src="img/bars-solid.svg" alt="Menu" />
-        <img src="img/globe-solid.svg" alt="Change Language" />
-        <span class="header__lang">Ru</span>
+        <img id="themeToggle" src="img/moon.svg" alt="Toggle Theme" />
+        <details class="lang-dropdown">
+          <summary class="lang-toggle">
+            <img id="langToggle" src="img/globe-solid.svg" alt="Change Language" />
+            <span class="header__lang">Ru</span>
+          </summary>
+          <ul class="lang-options">
+            <li data-lang="ru">Ru</li>
+            <li data-lang="eng">Eng</li>
+          </ul>
+        </details>
+        <!-- <img id="langToggle" src="img/globe-solid.svg" alt="Change Language" />
+        <span class="header__lang">Ru</span> -->
       </div>
     </header>
 
@@ -33,7 +43,7 @@
           <p class="input__p">
             loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit
             amet dui iaculis ex efficitur ultricies ac nec neque. Sed elementum
-            lectus vel dui feugiat.
+            lectus vel dui feugiat. Neque porro quisquam est qui dolorem..
           </p>
           <div class="input__type">
             <button><img src="img/link-solid.svg" alt="URL" /> URL</button>
@@ -48,18 +58,26 @@
             <input type="text" placeholder="https://" />
             <button class="btn-go">GO</button>
           </div>
-          <button class="btn-settings">
-            <div class="left-btn-settings">
-              <img src="img/gear-solid.svg" alt="Settings" />
-              <span>Настройки</span>
-            </div>
-            <span>+</span>
-          </button>
+          <details class="btn-settings">
+            <summary class="left-btn-settings">
+              <div>
+                <img src="img/gear-solid.svg" alt="Settings" />
+                <span>Настройки</span>
+              </div>
+              <span>+</span>
+            </summary>
+
+            <ul>
+              <li>Цвет</li>
+              <li>Фон</li>
+              <li>Размер</li>
+            </ul>
+          </details>
         </div>
 
         <div class="qr__container">
           <div class="qr__code">
-            <img src="img/Untitled.svg" alt="QR Code" />
+            <img src="img/qrcode.JPG" alt="QR Code" />
           </div>
           <div class="download__buttons">
             <button>
@@ -79,7 +97,7 @@
 
     <footer class="footer">
       <div class="header__logo">
-        <img src="img/logo.svg" alt="QR-Code Logo" />
+        <img src="img/qrcode.JPG" alt="QR-Code Logo" />
         <h1>QR-Code</h1>
       </div>
       <p class="p__text">
@@ -95,12 +113,16 @@
         <a href="#">Политика конфиденциальности</a>
       </div>
       <div class="social__media">
-        <a href="#"><img src="img/youtube-brands-solid.svg" alt="YouTube" /></a>
-        <a href="#"
-          ><img src="img/telegram-brands-solid.svg" alt="Telegram"
-        /></a>
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
       </div>
-      <p>© QR-Code.ru 2024.</p>
+      <p>© QRcode2025.ru</p>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
