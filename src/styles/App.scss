@@ -1,0 +1,692 @@
+$color: black;
+$button-color: #d9d9d9;
+$primary-color: #278fef;
+$secondary-color: #1ac8ff;
+$font-size: 16px;
+$border: 2px solid black;
+$border-radius: 8px;
+
+%button-set {
+  color: black;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  // max-width: 414px;
+}
+
+#root {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  // background-color: #f8f9fa;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    text-decoration: none;
+    color: $color;
+
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &__logo:visited {
+    color: $color;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    details {
+      margin-left: 35px;
+    }
+    img {
+      width: 24px;
+      cursor: pointer;
+    }
+  }
+
+  &__lang {
+    margin-left: 6px;
+  }
+}
+
+.main {
+  max-width: 314px;
+  text-align: center;
+
+  h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.05em;
+    line-height: 58px;
+
+    .highlight {
+      color: #007bff;
+      background: linear-gradient(90deg, #278fef, #1ac8ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .input__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input__type {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+
+      button {
+        font-family: Inter, sans-serif;
+        background-color: $button-color;
+        border: none;
+        border-radius: $border-radius;
+        padding: 14px 14px;
+        cursor: pointer;
+        font-size: $font-size;
+        display: flex;
+        align-items: center;
+        @extend %button-set;
+
+        img {
+          height: 16px;
+          margin-right: 5px;
+        }
+      }
+
+      button.active {
+        border: 2px solid $color;
+      }
+    }
+
+    .input__input {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 100%;
+        padding: 14px;
+        border: $border;
+        border-radius: $border-radius;
+        font-size: 14px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: #999; /* Задаёт цвет текста placeholder */
+        font-size: 16px; /* Задаёт размер шрифта */
+        opacity: 1; /* Делает placeholder полностью непрозрачным */
+        font-weight: 500;
+      }
+
+      // .btn-go {
+      //   width: 20%;
+      //   background-color: #ffffff;
+      //   border: $border;
+      //   border-radius: $border-radius;
+      //   padding: 10px 15px;
+      //   cursor: pointer;
+      //   @extend %button-set;
+      // }
+    }
+
+    .btn-settings {
+      width: 314px;
+      background-color: $button-color;
+      border: none;
+      border-radius: $border-radius;
+      margin-bottom: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $font-size;
+      font-weight: 500;
+      margin-top: 25px;
+      text-align: initial;
+      @extend %button-set;
+
+      .left-btn-settings {
+        display: flex;
+        align-items: center;
+        padding: 14px 30px;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+        }
+      }
+
+      img {
+        width: 18px;
+        margin-right: 5px;
+      }
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none; /* Эй, Chrome, смотри, стрелка исчезла! */
+    }
+  }
+
+  .qr__container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .qr__code {
+      max-width: 274px;
+      max-height: 274px;
+      margin: 0 auto;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .download__buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        background-color: $button-color;
+        border: none;
+        border-radius: $border-radius;
+        padding: 13px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: $font-size;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        @extend %button-set;
+
+        img {
+          width: 18px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.hr {
+  border: none; /* Убирает стандартное обрамление */
+  border-top: 2px solid $button-color; /* Создаёт серую линию толщиной 2px */
+  color: #808080; /* Задаёт цвет линии (на случай, если браузер будет использовать color) */
+  background-color: #808080; /* Резервный цвет для фона */
+  width: 100%;
+  margin: 16px;
+}
+
+.footer {
+  width: 100%;
+  //   background-color: #f8f9fa;
+  text-align: center;
+  font-size: $font-size;
+
+  .p__text {
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    padding: 16px;
+    margin: 0;
+    // letter-spacing: 1px;
+  }
+
+  .footer__nav {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      color: #728a96;
+      text-decoration: none;
+      margin: 5px 16px;
+    }
+  }
+
+  .social__media {
+    a {
+      margin: 0 10px;
+      color: $color;
+      font-size: 30px;
+      text-decoration: none;
+    }
+  }
+}
+
+// Медиа-запрос для планшетов (от 768px до 1024px)
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    max-width: 1024px; // Ширина экрана планшета
+    margin: 0 auto; // Центровка контента
+  }
+
+  .header {
+    max-width: 750px;
+
+    &__logo {
+      h1 {
+        font-size: 24px; // Увеличиваем размер шрифта
+        margin-left: 0;
+      }
+    }
+
+    &__icons {
+      img {
+        width: 28px; // Увеличиваем размер иконок
+      }
+
+      .header__lang {
+        font-size: 18px; // Увеличиваем размер текста
+      }
+    }
+  }
+
+  .main {
+    max-width: 700px; // Увеличиваем ширину основного контейнера
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 64px; // Увеличиваем размер заголовка
+      line-height: 1.1;
+
+      .highlight {
+        font-size: 76px;
+      }
+    }
+
+    &__content {
+      min-width: 668px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 30px;
+
+      .input__container {
+        max-width: 314px;
+        .input__p {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .input__type {
+          margin-bottom: 22px;
+
+          button {
+            padding: 12px 16px; // Увеличиваем отступы кнопок
+            font-size: 18px; // Увеличиваем шрифт
+          }
+        }
+
+        .input__input {
+          input {
+            width: 100%; // Увеличиваем ширину инпута
+            padding: 12px;
+            font-size: 16px;
+          }
+
+          // .btn-go {
+          //   width: 20%;
+          //   padding: 12px 18px;
+          //   font-size: $font-size;
+          // }
+        }
+
+        .btn-settings {
+          width: 100%; // Расширяем кнопку на всю ширину
+          font-size: 18px; // Увеличиваем размер текста
+          margin-bottom: 0;
+          margin-top: 22px;
+        }
+      }
+
+      .qr__container {
+        margin-bottom: 0;
+
+        .qr__code {
+          width: 300px;
+          height: 300px;
+        }
+
+        .download__buttons {
+          button {
+            padding: 14.5px 12px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .hr {
+    max-width: 668px;
+  }
+  .footer {
+    padding: 20px;
+    max-width: 668px;
+
+    .p__text {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    .footer__nav {
+      flex-direction: row; // Перестраиваем элементы в линию
+      flex-wrap: wrap; // Позволяем переносить элементы на следующую строку при нехватке места
+      justify-content: center;
+
+      a {
+        margin: 8px 10px; // Отступы между ссылками
+      }
+    }
+
+    .social__media {
+      margin: 10px 0;
+
+      a {
+        img {
+          width: 38px; // Увеличиваем иконки соц. сетей
+        }
+      }
+    }
+  }
+}
+
+// Медиа-запрос для компьютеров (от 1024px)
+@media screen and (min-width: 1025px) {
+  body {
+    // max-width: 1024px; // Ширина экрана компа
+    margin: 0 auto; // Центровка контента
+  }
+
+  .header {
+    width: 1120px;
+
+    &__logo {
+      margin-left: 0;
+    }
+
+    &__icons {
+      img {
+        width: 28px; // Увеличиваем размер иконок
+      }
+
+      .header__lang {
+        font-size: 18px; // Увеличиваем размер текста
+      }
+    }
+  }
+
+  .main {
+    min-width: 800px; // Увеличиваем ширину основного контейнера
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 76px; // Увеличиваем размер заголовка
+      line-height: 1.1;
+
+      .highlight {
+        font-size: 108px;
+      }
+    }
+
+    &__content {
+      min-width: 668px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 30px;
+
+      .input__container {
+        max-width: 420px;
+        .input__p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        .input__type {
+          margin-bottom: 29px;
+          button {
+            padding: 12px 16px; // Увеличиваем отступы кнопок
+            font-size: 18px; // Увеличиваем шрифт
+          }
+        }
+
+        .input__input {
+          input {
+            width: 100%; // Увеличиваем ширину инпута
+            padding: 12px;
+            font-size: 16px;
+          }
+
+          // .btn-go {
+          //   width: 20%;
+          //   padding: 12px 18px;
+          //   font-size: $font-size;
+          // }
+        }
+
+        .btn-settings {
+          width: 100%; // Расширяем кнопку на всю ширину
+          font-size: 18px; // Увеличиваем размер текста
+          margin-bottom: 0;
+          margin-top: 28px;
+        }
+      }
+
+      .qr__container {
+        margin-bottom: 0;
+
+        .qr__code {
+          width: 300px;
+          height: 300px;
+        }
+
+        .download__buttons {
+          button {
+            padding: 14.5px 12px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .hr {
+    max-width: 800px;
+  }
+  .footer {
+    // padding: 20px;
+    width: 800px;
+
+    .p__text {
+      font-size: 18px;
+      line-height: 32px;
+      padding: 16px 0;
+    }
+
+    .footer__nav {
+      flex-direction: row; // Перестраиваем элементы в линию
+      flex-wrap: wrap; // Позволяем переносить элементы на следующую строку при нехватке места
+      justify-content: center;
+
+      a {
+        margin: 8px 10px; // Отступы между ссылками
+      }
+    }
+
+    .social__media {
+      margin: 10px 0;
+
+      a {
+        img {
+          width: 38px; // Увеличиваем иконки соц. сетей
+        }
+      }
+    }
+  }
+}
+
+// Темная тема
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+body.light-theme {
+  background-color: #fff;
+  color: #000000;
+}
+body.dark-theme {
+  background-color: #2f2f2f;
+  color: #ffffff !important;
+
+  .header__logo:visited {
+    color: #ffffff;
+  }
+  .header__logo {
+    color: #ffffff;
+  }
+  .footer__nav a {
+    color: #17adf9;
+  }
+
+  .social__media {
+    a {
+      color: white;
+    }
+  }
+}
+div.light-theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000000;
+  width: 100vw;
+}
+div.dark-theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f2f2f;
+  color: #ffffff !important;
+  width: 100vw;
+
+  .header__logo:visited {
+    color: #ffffff;
+  }
+  .header__logo {
+    color: #ffffff;
+  }
+  .footer__nav a {
+    color: #17adf9;
+  }
+
+  .social__media {
+    a {
+      color: white;
+    }
+  }
+}
+
+// Experiments
+.header__icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.lang-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%; /* Чтобы список появлялся под кнопкой */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none; /* Скрываем список по умолчанию */
+  z-index: 1;
+}
+
+.lang-dropdown[open] .lang-options {
+  display: block; /* Показываем список, когда details открыт */
+}
+
+.lang-options li {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.lang-options li:hover {
+  background-color: #f0f0f0;
+}

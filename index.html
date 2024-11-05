@@ -9,120 +9,12 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/54cdbeebd7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
   </head>
 
   <body class="light-theme">
-    <header class="header">
-      <a href="/index.html" class="header__logo">
-        <img src="img/qrcode.JPG" alt="QR-Code Logo" />
-        <h1>QRcode2025.ru</h1>
-      </a>
-      <div class="header__icons">
-        <img id="themeToggle" src="img/moon.svg" alt="Toggle Theme" />
-        <details class="lang-dropdown">
-          <summary class="lang-toggle">
-            <img id="langToggle" src="img/globe-solid.svg" alt="Change Language" />
-            <span class="header__lang">Ru</span>
-          </summary>
-          <ul class="lang-options">
-            <li data-lang="ru">Ru</li>
-            <li data-lang="eng">Eng</li>
-          </ul>
-        </details>
-        <!-- <img id="langToggle" src="img/globe-solid.svg" alt="Change Language" />
-        <span class="header__lang">Ru</span> -->
-      </div>
-    </header>
-
-    <main class="main">
-      <h2>Твой QR&#8209;код<br /><span class="highlight">для сайта</span></h2>
-
-      <div class="main__content">
-        <div class="input__container">
-          <p class="input__p">
-            loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit
-            amet dui iaculis ex efficitur ultricies ac nec neque. Sed elementum
-            lectus vel dui feugiat. Neque porro quisquam est qui dolorem..
-          </p>
-          <div class="input__type">
-            <button><img src="img/link-solid.svg" alt="URL" /> URL</button>
-            <button>
-              <img src="img/envelope-solid.svg" alt="Email" /> E-mail
-            </button>
-            <button>
-              <img src="img/align-justify-solid.svg" alt="Text" /> Text
-            </button>
-          </div>
-          <div class="input__input">
-            <input type="text" placeholder="https://" />
-            <button class="btn-go">GO</button>
-          </div>
-          <details class="btn-settings">
-            <summary class="left-btn-settings">
-              <div>
-                <img src="img/gear-solid.svg" alt="Settings" />
-                <span>Настройки</span>
-              </div>
-              <span>+</span>
-            </summary>
-
-            <ul>
-              <li>Цвет</li>
-              <li>Фон</li>
-              <li>Размер</li>
-            </ul>
-          </details>
-        </div>
-
-        <div class="qr__container">
-          <div class="qr__code">
-            <img src="img/qrcode.JPG" alt="QR Code" />
-          </div>
-          <div class="download__buttons">
-            <button>
-              <img src="img/download-solid.svg" alt="Download PNG" /> Скачать
-              PNG
-            </button>
-            <button>
-              <img src="img/download-solid.svg" alt="Download SVG" /> Скачать
-              SVG
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <hr class="hr" />
-
-    <footer class="footer">
-      <div class="header__logo">
-        <img src="img/qrcode.JPG" alt="QR-Code Logo" />
-        <h1>QR-Code</h1>
-      </div>
-      <p class="p__text">
-        loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit
-        amet dui iaculis ex efficitur ultricies ac nec neque. Sed elementum
-        lectus vel.
-      </p>
-      <div class="footer__nav">
-        <a href="#">Главная</a>
-        <a href="#">О нас</a>
-        <a href="#">Вопросы/Ответы</a>
-        <a href="#">Условия использования</a>
-        <a href="#">Политика конфиденциальности</a>
-      </div>
-      <div class="social__media">
-        <a href="#">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-telegram"></i>
-        </a>
-      </div>
-      <p>© QRcode2025.ru</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
